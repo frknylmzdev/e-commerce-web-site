@@ -1,0 +1,27 @@
+{
+  "name": "3d-print-ecommerce",
+  "version": "1.0.0",
+  "description": "Modern 3D Yazıcı E-Ticaret Sitesi",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "keywords": ["3d-printer", "e-commerce", "3d-models", "filament", "3d-printing"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "^13.4.19",
+    "bootstrap": "^5.3.0",
+    "@fortawesome/fontawesome-free": "^6.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.47.0",
+    "eslint-plugin-react": "^7.33.2",
+    "sass": "^1.66.1"
+  }
+}
