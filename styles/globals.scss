@@ -1,0 +1,180 @@
+@import "~bootstrap/scss/bootstrap";
+@import "./responsive.scss";
+
+// Custom variables
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$dark-color: #2c3e50;
+$light-color: #ecf0f1;
+$accent-color: #e74c3c;
+
+// Global styles
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $dark-color;
+  background-color: $light-color;
+}
+
+// Custom button styles
+.btn-primary {
+  background-color: $primary-color;
+  border-color: $primary-color;
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    border-color: darken($primary-color, 10%);
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+    border-color: darken($secondary-color, 10%);
+  }
+}
+
+// Header styles
+.navbar {
+  background-color: $dark-color;
+  .navbar-brand {
+    color: $light-color;
+    font-weight: bold;
+  }
+  .nav-link {
+    color: $light-color;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+// Footer styles
+.footer {
+  background-color: $dark-color;
+  color: $light-color;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+// Product card styles
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  .card-img-top {
+    height: 200px;
+    object-fit: contain;
+    padding: 1rem;
+  }
+  .card-title {
+    font-weight: bold;
+    color: $dark-color;
+  }
+  .card-text {
+    color: lighten($dark-color, 20%);
+  }
+  .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $accent-color;
+  }
+}
+
+// Product detail styles
+.product-detail {
+  .product-image {
+    max-height: 400px;
+    object-fit: contain;
+  }
+  .product-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $dark-color;
+  }
+  .product-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: $accent-color;
+  }
+  .product-description {
+    margin: 1.5rem 0;
+    line-height: 1.6;
+  }
+}
+
+// Cart styles
+.cart-item {
+  padding: 1rem;
+  border-bottom: 1px solid $light-color;
+  .item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+  .item-title {
+    font-weight: bold;
+  }
+  .item-price {
+    color: $accent-color;
+    font-weight: bold;
+  }
+}
+
+// Hero section
+.hero {
+  background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 5rem 0;
+  margin-bottom: 3rem;
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1rem auto;
+  }
+}
+
+// Category section
+.category-section {
+  margin: 3rem 0;
+  .category-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background-color: $primary-color;
+    }
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .hero {
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+  }
+  .product-card {
+    .card-img-top {
+      height: 150px;
+    }
+  }
+}
