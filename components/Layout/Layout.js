@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { useEffect } from 'react';
-import Header from '../components/layout/Header';
-import Footer from '../components/layout/Footer';
+import Header from '../components/Layout/Header';
+import Footer from '../components/Layout/Footer';
 
 export default function Layout({ children, title = '3D Yazıcı E-Ticaret' }) {
   useEffect(() => {
